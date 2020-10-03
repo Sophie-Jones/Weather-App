@@ -98,3 +98,8 @@ li .fas {
   display: block;
   font-weight: 900;
 }
+
+.source-code-link {
+  display: block;
+  text-align: center;
+}
