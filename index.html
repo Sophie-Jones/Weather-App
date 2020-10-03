@@ -3,11 +3,129 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Weather App</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script
+      src="https://kit.fontawesome.com/f401abc22d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
-    <h1>Hey Sophie 👋</h1>
-    <script src="script.js"></script>
+    <div class="container">
+      <div class="main-body">
+        <header>
+          <form id="location-form">
+            <input
+              type="text"
+              id="search-bar-input"
+              placeholder="search location..."
+              autocomplete="off"
+              class="location-search-bar"
+            />
+            <input type="submit" value="🔍" />
+          </form>
+        </header>
+
+        <section class="current-weather-section">
+          <div class="row">
+            <div class="col-6">
+              <section class="current-weather-left-section">
+                <div class="current-temperature">
+                  <span id="temperature"></span>
+                  <span id="celsius-units">°C</span>
+                </div>
+                <img
+                  src="images/cloudy-sky.jpg"
+                  alt="cloudy-sky-img"
+                  class="weather-image"
+                />
+              </section>
+            </div>
+            <div class="col-6">
+              <section class="current-weather-right-section">
+                <h1>
+                  Today |
+                  <small class="current-date"> Sunday 30th August</small>
+                </h1>
+                <h2 class="current-city"></h2>
+
+                <hr />
+                <span class="weather-description">
+                  <ul>
+                    <li>
+                      <span class="short-text-weather-description"></span>
+                    </li>
+                    <li>
+                      <span class="humidity">Humidity: %</span>
+                    </li>
+                    <li>
+                      <span class="wind-speed">Wind: km/h</span>
+                    </li>
+                  </ul>
+                </span>
+              </section>
+            </div>
+          </div>
+        </section>
+
+        <section class="week-forecast">
+          <div class="row">
+            <div class="col-2">
+              <span class="day">Mon</span><br />
+              <i class="fas fa-cloud-rain"></i>
+              <br />
+              13°C
+            </div>
+            <div class="col-2">
+              <span class="day">Tues</span><br />
+              <i class="fas fa-cloud-sun"></i>
+              <br />
+              13°C
+            </div>
+            <div class="col-2">
+              <span class="day">Wed</span><br />
+              <i class="fas fa-cloud-showers-heavy"></i>
+              <br />
+              13°C
+            </div>
+            <div class="col-2">
+              <span class="day">Thurs</span><br />
+              <i class="fas fa-cloud-showers-heavy"></i>
+              <br />
+              13°C
+            </div>
+            <div class="col-2">
+              <span class="day">Fri</span><br />
+              <i class="fas fa-cloud-sun"></i>
+              <br />
+              13°C
+            </div>
+            <div class="col-2">
+              <span class="day">Sat</span><br />
+              <i class="fas fa-sun"></i>
+              <br />
+              13°C
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="src/script.js"></script>
   </body>
 </html>
