@@ -64,16 +64,9 @@ form {
 
 #celsius-units {
   position: relative;
-  top: -55px;
+  top: -62px;
   font-size: 20px;
   font-weight: 400;
-  color: white;
-}
-
-.short-text-weather-description {
-  text-align: right;
-
-  font-weight: 200;
   color: white;
 }
 
@@ -96,6 +89,11 @@ form {
 .current-city {
   font-size: 40px;
   padding: 20px;
+}
+
+.short-text-weather-description {
+  font-weight: 700;
+  color: #424242;
 }
 
 .weather-measurements {

@@ -48,6 +48,13 @@ function showWeatherConditions(response) {
   document.querySelector(".current-date").innerHTML = formatDate(
     response.data.dt * 1000
   );
+
+  document
+    .querySelector("#icon")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
 }
 
 function search(city) {
@@ -58,7 +65,6 @@ function search(city) {
 
 function handleSubmit(event) {
   event.preventDefault();
-
   let city = document.querySelector("#search-bar-input").value;
   search(city);
 }

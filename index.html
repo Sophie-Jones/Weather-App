@@ -48,14 +48,15 @@
             <div class="col-6 current-weather-left-section">
               <ul id="icon-and-temperature-list">
                 <li class="current-weather-icon">
-                  <i class="fas fa-cloud-sun current"></i>
+                  <img
+                    src="http://openweathermap.org/img/wn/10d@2x.png"
+                    alt="Weather icon"
+                    id="icon"
+                  />
                 </li>
                 <li class="current-temperature">
-                  <span id="temperature">27</span
-                  ><span id="celsius-units">°C | F</span>
-                </li>
-                <li class="short-text-weather-description">
-                  Weather description
+                  <span id="temperature">27</span>
+                  <span id="celsius-units">°C | F</span>
                 </li>
               </ul>
             </div>
@@ -69,14 +70,17 @@
               <hr />
 
               <ul class="weather-measurements">
-                <li>
-                  <span class="cloud-cover">Cloud cover: %</span>
+                <li class="short-text-weather-description">
+                  Scattered showers
                 </li>
                 <li>
-                  <span class="humidity">Humidity: %</span>
+                  <span class="cloud-cover">Cloud cover: 20%</span>
                 </li>
                 <li>
-                  <span class="wind-speed">Wind: km/h</span>
+                  <span class="humidity">Humidity: 82%</span>
+                </li>
+                <li>
+                  <span class="wind-speed">Wind: 8 km/h</span>
                 </li>
               </ul>
             </div>
