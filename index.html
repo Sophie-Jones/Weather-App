@@ -11,11 +11,11 @@
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="src/styles.css" />
     <script
       src="https://kit.fontawesome.com/f401abc22d.js"
       crossorigin="anonymous"
     ></script>
+
     <link
       href="https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap"
       rel="stylesheet"
@@ -24,6 +24,7 @@
       href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="src/styles.css" />
   </head>
 
   <body>
@@ -38,100 +39,92 @@
               autocomplete="off"
               class="location-search-bar"
             />
-            <input type="submit" value="🔍" />
+            <input id="search-button" type="submit" value="🔍" />
           </form>
         </header>
 
         <section class="current-weather-section">
           <div class="row">
-            <div class="col-6">
-              <section class="current-weather-left-section">
-                <div class="current-temperature">
-                  <span id="temperature"></span>
-                  <span id="celsius-units">°C</span>
-                </div>
-                <img
-                  src="images/cloudy-sky.jpg"
-                  alt="cloudy-sky-img"
-                  class="weather-image"
-                />
-              </section>
+            <div class="col-6 current-weather-left-section">
+              <ul id="icon-and-temperature-list">
+                <li class="current-weather-icon">
+                  <i class="fas fa-cloud-sun current"></i>
+                </li>
+                <li class="current-temperature">
+                  <span id="temperature">27</span
+                  ><span id="celsius-units">°C | F</span>
+                </li>
+                <li class="short-text-weather-description">
+                  Weather description
+                </li>
+              </ul>
             </div>
-            <div class="col-6">
-              <section class="current-weather-right-section">
-                <h1>
-                  Today |
-                  <small class="current-date"> Sunday 30th August</small>
-                </h1>
-                <h2 class="current-city"></h2>
+            <div class="col-6 current-weather-right-section">
+              <h1 id="date-and-time">
+                Today |
+                <small class="current-date"> Sunday 30th August</small>
+              </h1>
+              <h2 class="current-city">Glasgow</h2>
 
-                <hr />
-                <span class="weather-description">
-                  <ul>
-                    <li>
-                      <span class="short-text-weather-description"></span>
-                    </li>
-                    <li>
-                      <span class="humidity">Humidity: %</span>
-                    </li>
-                    <li>
-                      <span class="wind-speed">Wind: km/h</span>
-                    </li>
-                  </ul>
-                </span>
-              </section>
+              <hr />
+
+              <ul class="weather-measurements">
+                <li>
+                  <span class="cloud-cover">Cloud cover: %</span>
+                </li>
+                <li>
+                  <span class="humidity">Humidity: %</span>
+                </li>
+                <li>
+                  <span class="wind-speed">Wind: km/h</span>
+                </li>
+              </ul>
             </div>
           </div>
         </section>
 
         <section class="week-forecast">
           <div class="row">
-            <div class="col-2">
+            <div class="col-2 forecast-block">
               <span class="day">Mon</span><br />
-              <i class="fas fa-cloud-rain"></i>
-              <br />
+              <i class="fas fa-cloud-rain"></i><br />
               13°C
             </div>
-            <div class="col-2">
+            <div class="col-2 forecast-block">
               <span class="day">Tues</span><br />
               <i class="fas fa-cloud-sun"></i>
               <br />
               13°C
             </div>
-            <div class="col-2">
+            <div class="col-2 forecast-block">
               <span class="day">Wed</span><br />
               <i class="fas fa-cloud-showers-heavy"></i>
               <br />
               13°C
             </div>
-            <div class="col-2">
+            <div class="col-2 forecast-block">
               <span class="day">Thurs</span><br />
               <i class="fas fa-cloud-showers-heavy"></i>
               <br />
               13°C
             </div>
-            <div class="col-2">
+            <div class="col-2 forecast-block">
               <span class="day">Fri</span><br />
               <i class="fas fa-cloud-sun"></i>
-              <br />
-              13°C
-            </div>
-            <div class="col-2">
-              <span class="day">Sat</span><br />
-              <i class="fas fa-sun"></i>
               <br />
               13°C
             </div>
           </div>
         </section>
       </div>
+      <footer class="source-code-link">
+        <a href="https://github.com/Sophie-Jones/Weather-App" target="_blank"
+          >Open-source code</a
+        >
+        by Sophie Jones
+      </footer>
     </div>
-    <footer class="source-code-link">
-      <a href="https://github.com/Sophie-Jones/Weather-App" target="_blank"
-        >Open-source code</a
-      >
-      by Sophie Jones
-    </footer>
+
     <script src="src/index.js"></script>
   </body>
 </html>

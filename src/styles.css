@@ -1,9 +1,14 @@
 .container {
-  width: 65%;
+  max-width: 800px;
+  margin: 10px auto;
+}
+
+.main-body {
   border: solid 1px #ffffff;
   border-radius: 10px;
   background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
-  margin-top: 10px;
+  font-family: "Comfortaa", cursive;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 form {
@@ -14,48 +19,68 @@ form {
 
 .location-search-bar {
   width: 450px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 }
 
+#search-button {
+  border: none;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
 .current-weather-section {
   display: block;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin-right: 75px;
-  margin-left: 75px;
+  margin: 40px 75px 40px;
   text-align: center;
 }
 
+.current-weather-left-section {
+  height: 300px;
+  border-radius: 5px;
+  background-color: #f48fb1;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+#icon-and-temperature-list {
+  list-style: none;
+  padding: 30px;
+}
+
+.current-weather-icon {
+  text-align: right;
+  font-size: 50px;
+  color: white;
+}
+
 .current-temperature {
-  position: absolute;
-  top: 85px;
-  left: 120px;
+  text-align: left;
 }
 
 #temperature {
-  font-family: "Comfortaa", cursive;
   font-size: 100px;
   font-weight: 400;
   color: white;
 }
 
 #celsius-units {
-  font-family: "Comfortaa", cursive;
-  font-size: 30px;
-  font-weight: 700;
+  position: relative;
+  top: -55px;
+  font-size: 20px;
+  font-weight: 400;
   color: white;
-  position: absolute;
-  top: 25px;
 }
 
-.weather-image {
-  display: block;
-  width: 300px;
-  height: 300px;
-  border-radius: 100%;
+.short-text-weather-description {
+  text-align: right;
+  text-transform: capitalize;
+  font-weight: 200;
+  color: white;
 }
 
-h1 {
-  font-family: "Comfortaa", cursive;
+.current-weather-right-section {
+}
+
+#date-and-time {
   font-size: 24px;
   padding-top: 30px;
 }
@@ -67,28 +92,27 @@ h1 {
 .current-city {
   font-size: 40px;
   padding: 20px;
-  font-family: "Comfortaa", cursive;
 }
 
-ul {
-  font-family: "Comfortaa", cursive;
+.weather-measurements {
   list-style: none;
   text-align: center;
   margin-right: 40px;
-
   margin-top: 20px;
 }
 
-li .fas {
-  font-size: 20px;
+.week-forecast {
+  display: block;
+  margin: 5px 75px 20px;
+  text-align: center;
 }
 
-.week-forecast {
-  font-family: "Comfortaa", cursive;
-  display: block;
-  margin-bottom: 20px;
-  text-align: center;
-  padding: 5px 20px 20px;
+.forecast-block {
+  background-color: #a5d6a7;
+  border-radius: 5px;
+  padding: 5px 0;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+  margin: 5px 10px 5px;
 }
 .week-forecast .fas {
   text-align: center;
@@ -102,4 +126,5 @@ li .fas {
 .source-code-link {
   display: block;
   text-align: center;
+  margin-top: 20px;
 }

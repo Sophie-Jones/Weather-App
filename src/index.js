@@ -40,7 +40,7 @@ function showWeatherConditions(response) {
   let windSpeed = document.querySelector(".wind-speed");
   windSpeed.innerHTML = windspeedMessage;
 
-  let shortDescription = response.data.weather[0].main;
+  let shortDescription = response.data.weather[0].description;
   let descriptionMessage = `${shortDescription}`;
 
   let weatherDescription = document.querySelector(
