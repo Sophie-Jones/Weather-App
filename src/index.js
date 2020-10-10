@@ -25,34 +25,29 @@ h1.innerHTML = `${day} ${hour}:${minutes}`;
 function showWeatherConditions(response) {
   document.querySelector(".current-city").innerHTML = response.data.name;
 
-  let currentTemperature = Math.round(response.data.main.temp);
-  let temperatureMessage = `${currentTemperature}`;
-  let temperature = document.querySelector("#temperature");
-  temperature.innerHTML = temperatureMessage;
-
-  let currentHumidity = Math.round(response.data.main.humidity);
-  let humidityMessage = `Humidity: ${currentHumidity}%`;
-  let humidity = document.querySelector(".humidity");
-  humidity.innerHTML = humidityMessage;
-
-  let currentWindSpeed = Math.round(response.data.wind.speed);
-  let windspeedMessage = `Wind: ${currentWindSpeed} km/h`;
-  let windSpeed = document.querySelector(".wind-speed");
-  windSpeed.innerHTML = windspeedMessage;
-
-  let shortDescription = response.data.weather[0].description;
-  let descriptionMessage = `${shortDescription}`;
-
-  let weatherDescription = document.querySelector(
-    ".short-text-weather-description"
+  document.querySelector("#temperature").innerHTML = Math.round(
+    response.data.main.temp
   );
-  weatherDescription.innerHTML = descriptionMessage;
+
+  document.querySelector(".cloud-cover").innerHTML = `Cloud cover: ${Math.round(
+    response.data.clouds.all
+  )}%`;
+
+  document.querySelector(".humidity").innerHTML = `Humidity: ${Math.round(
+    response.data.main.humidity
+  )}%`;
+
+  document.querySelector(".wind-speed").innerHTML = `Wind: ${Math.round(
+    response.data.wind.speed
+  )} km/h`;
+
+  document.querySelector(".short-text-weather-description").innerHTML =
+    response.data.weather[0].description;
 }
 
 function search(city) {
   let apiKey = "82104c825dd2d93fbab3e7b5f1825f7a";
-  let units = "metric";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric`;
   axios.get(`${apiUrl}&appid=${apiKey}`).then(showWeatherConditions);
 }
 
