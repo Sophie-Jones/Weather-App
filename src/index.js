@@ -59,7 +59,7 @@ function showWeatherConditions(response) {
     .querySelector("#icon")
     .setAttribute(
       "src",
-      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+      `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
 }
 
@@ -73,7 +73,7 @@ function displayForecast(response) {
     forecastElement.innerHTML += `<div class="col-2 forecast-block">
               <h3>${formatHours(forecast.dt * 1000)}</h3>
               <img
-                src="http://openweathermap.org/img/wn/${
+                src="https://openweathermap.org/img/wn/${
                   forecast.weather[0].icon
                 }@2x.png"
                 alt="Weather icon"
