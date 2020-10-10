@@ -69,5 +69,7 @@ function handleSubmit(event) {
   search(city);
 }
 
+search("Glasgow");
+
 let locationForm = document.querySelector("#location-form");
 locationForm.addEventListener("submit", handleSubmit);

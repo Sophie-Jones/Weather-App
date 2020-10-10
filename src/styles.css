@@ -13,20 +13,24 @@
 
 form {
   text-align: center;
-  margin-top: 40px;
-  width: 100%;
+  margin: 40px 75px;
 }
 
 .location-search-bar {
-  width: 450px;
   border: none;
   border-radius: 5px;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 }
-
+.search-bar-width {
+  padding: 0;
+}
+.search-button-width {
+  padding: 0;
+}
 #search-button {
   border: none;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+  padding: 7px 24px;
 }
 .current-weather-section {
   display: block;
