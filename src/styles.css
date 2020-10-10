@@ -107,9 +107,8 @@ form {
   margin-top: 20px;
 }
 
-.week-forecast {
-  display: block;
-  margin: 5px 75px 20px;
+.weather-forecast {
+  margin: 5px 64px 20px;
   text-align: center;
 }
 
@@ -118,17 +117,22 @@ form {
   border-radius: 5px;
   padding: 5px 0;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
-  margin: 5px 10px 5px;
-}
-.week-forecast .fas {
-  text-align: center;
-  font-size: 30px;
-}
-.week-forecast .day {
-  display: block;
-  font-weight: 900;
+  margin: 5px 11px 5px;
 }
 
+.weather-forecast h3 {
+  font-size: 18px;
+  line-height: 18px;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.weather-forecast img {
+  display: block;
+  margin: 0 auto;
+  height: 48px;
+  width: 48px;
+}
 .source-code-link {
   display: block;
   text-align: center;
