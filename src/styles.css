@@ -72,9 +72,13 @@ form {
 
 .short-text-weather-description {
   text-align: right;
-  text-transform: capitalize;
+
   font-weight: 200;
   color: white;
+}
+
+.short-text-weather-description:first-letter {
+  text-transform: capitalize;
 }
 
 .current-weather-right-section {
