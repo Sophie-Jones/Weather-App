@@ -72,8 +72,8 @@ form {
 
 .current-weather-left-section img {
   text-align: right;
-  height: 100px;
-  width: 100px;
+  height: 110px;
+  width: 110px;
 }
 
 .current-temperature {
@@ -91,6 +91,10 @@ form {
   top: -62px;
   font-size: 20px;
   font-weight: 400;
+  color: white;
+}
+
+#units a {
   color: white;
 }
 
