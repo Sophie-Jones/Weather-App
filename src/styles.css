@@ -56,11 +56,6 @@ form {
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 }
 
-.current-weather-left-section:hover {
-  background-color: #f8bbd0;
-  transition: all 300ms ease-in-out;
-}
-
 #icon-and-temperature-list {
   list-style: none;
   padding: 30px;
